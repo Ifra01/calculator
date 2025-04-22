@@ -1,0 +1,251 @@
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(Poppins/Poppins-Regular.ttf);
+}
+
+button{
+    font-family: poppins !important;
+}
+
+.btn{
+    color: pink !important;
+    background-color: black !important;
+    border: 1.2px solid rgb(172, 170, 170) !important;
+    box-shadow: 2px 1.5px 2px black !important;
+    position: relative !important;
+}
+
+.btn-change{
+    color: rgb(95, 85, 73) !important;
+    background-color: aliceblue !important;
+    border: 1.2px solid rgb(122, 110, 77) !important;
+    box-shadow: 2px 1.5px 2px rgb(51, 45, 45) !important;
+}
+
+.bg{
+    background-color: rgb(169, 170, 170);
+    height: 700px !important;
+    width: 100% !important;
+}
+
+.inactive {
+    transform: scale(1);         
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    background-color: #f1f1f1;    
+    color: #333;                
+    border: 2px solid #ddd;      
+    transition: all 0.1s ease;    
+  }
+
+.active {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(75, 75, 75, 0.3) 1%, transparent 1%) center/15000%;
+  }
+  
+  .active:active:after {
+    background-size: 100%;
+    transition: background-size 0.3s;
+  }
+
+.structure{
+    width: 310px !important;
+    height: 470px !important;
+    background-color: rgb(58, 56, 56);
+    border-radius: 37px !important;
+    padding-left: 7px !important;
+    padding-top: 7px !important;
+}
+
+.display{
+    width: 296px !important;
+    height: 160px !important;
+    background-color: rgb(22, 22, 22);
+   border-top-right-radius: 32px !important;
+   border-top-left-radius: 32px !important;
+   border-bottom-left-radius: 10px !important;
+   border-bottom-right-radius: 10px !important;
+}
+
+.sm{
+    padding: 2px 15px !important;
+}
+
+.lg{
+    padding: 2px 19px !important;
+}
+
+.md{
+    padding: 2px 14px !important;
+}
+
+.xl{
+    padding: 2px 16px !important; 
+}
+
+.xxl{
+    padding: 2px 20px !important;
+}
+
+.rang{
+    color: rgb(247, 177, 189) !important;
+}
+
+.chng{
+    color: aliceblue !important;
+}
+
+.pink{
+    background-color: rgb(247, 177, 189) !important;
+    color: aliceblue !important;
+    border: 1.2px solid rgb(37, 37, 37) !important;
+    box-shadow: 2px 1.5px 2px rgb(27, 27, 27) !important;
+}
+
+.night{
+    background-color: rgb(116, 102, 86) !important;
+    color: aliceblue !important;
+    border: 2px solid rgb(168, 153, 121) !important;
+    box-shadow: 2px 1.8px 2px rgb(58, 49, 36) !important;
+}
+
+.night-mode{
+    background-color: rgb(223, 225, 226) !important;
+}
+
+.night-mode2{
+    background-color: rgb(116, 102, 86) !important;
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* iPhone frame */
+.iphone {
+    width: 370px;
+    /* iPhone 12/13 mini width */
+    height: 660px;
+    /* iPhone 8 height */
+    background-color: #333;
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Screen area */
+.screen {
+    width: 100%;
+    height: 100%;
+    background-color: #e7e5e5;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Status bar (time, battery, etc.) */
+.status-bar {
+    color: rgb(24, 24, 24);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Calculator display */
+.display {
+    color: #333;
+    text-align: right;
+    padding: 20px;
+    font-size: 64px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* Calculator buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 22px 15px;
+}
+
+.btn {
+    width: 100%;
+    aspect-ratio: 1;
+    /* Makes buttons square */
+    border-radius: 50%;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.btn:active {
+    opacity: 0.7;
+}
+
+/* Gray buttons (numbers) */
+.btn-gray {
+    background-color: #868282;
+    color: #FFF;
+}
+
+/* Dark gray buttons (numbers) */
+.btn-dark-gray {
+    background-color: #868282;
+    color: #fff;
+}
+
+/* Orange buttons (operators) */
+.btn-pink {
+    background-color: #a08194;
+    color: #333;
+}
+
+/* Zero button (special case) */
+.btn-zero {
+    grid-column: span 2;
+    border-radius: 50px;
+    aspect-ratio: 2;
+    justify-content: flex-start;
+    padding-left: 30px;
+}
