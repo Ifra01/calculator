@@ -1,7 +1,7 @@
 
 
-// let btn = document.getElementById("btn");
-// let btn_sun = document.getElementById("btn-sun")
+let btn = document.getElementById("btn");
+let btn_sun = document.getElementById("btn-sun")
 // let display = document.getElementById("space")
 // let calculator = document.getElementById("calculator")
 // let buttons = document.getElementsByClassName("btn")

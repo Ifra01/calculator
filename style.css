@@ -3,10 +3,7 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: poppins;
-    src: url(Poppins/Poppins-Regular.ttf);
-}
+
 
 button{
     font-family: poppins !important;
@@ -137,57 +134,47 @@ button{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: poppins;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(Poppins/Poppins-Regular.ttf);
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: url(bg.webp);
+    background-image: url(bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+   justify-content: center;
+   align-items: center;
+   padding-top: 100px;
 }
 
-/* iPhone frame */
-.iphone {
-    width: 370px;
-    /* iPhone 12/13 mini width */
-    height: 660px;
-    /* iPhone 8 height */
-    background-color: #333;
-    border-radius: 50px;
-    padding: 20px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-}
+
 
 /* Screen area */
 .screen {
-    width: 100%;
-    height: 100%;
-    background-color: #e7e5e5;
-    border-radius: 30px;
+    width: 340px;
+    height: 530px;
+    /* background-color: #e7e5e5; */
+    background-color: rgb(61, 61, 61);
+    border-radius: 55px;
+    padding: 7px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
-/* Status bar (time, battery, etc.) */
-.status-bar {
-    color: rgb(24, 24, 24);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    font-weight: 600;
-}
-
 /* Calculator display */
 .display {
-    color: #333;
+    background-color: black;
+    color: #FFF;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px ;
     text-align: right;
     padding: 20px;
     font-size: 64px;
@@ -201,12 +188,12 @@ body {
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 22px 15px;
+    gap: 13px;
+    padding: 15px 10px;
 }
 
 .btn {
-    width: 100%;
+    width: 83%;
     aspect-ratio: 1;
     /* Makes buttons square */
     border-radius: 50%;
@@ -215,6 +202,7 @@ body {
     cursor: pointer;
     display: flex;
     justify-content: center;
+
     align-items: center;
     transition: opacity 0.2s;
 }
@@ -225,26 +213,38 @@ body {
 
 /* Gray buttons (numbers) */
 .btn-gray {
-    background-color: #868282;
-    color: #FFF;
+    /* background-color: #868282;
+    color: #FFF; */
+    color: rgb(236, 204, 209) !important;
+    background-color: rgb(27, 27, 27) !important;
+    border-top: 1.2px solid rgb(172, 170, 170) !important;
+    box-shadow: 2px 2px 2px black !important;
 }
 
 /* Dark gray buttons (numbers) */
 .btn-dark-gray {
-    background-color: #868282;
-    color: #fff;
+    /* background-color: #868282;
+    color: #fff; */
+    color: rgb(236, 204, 209) !important;
+    background-color: rgb(27, 27, 27) !important;
+    border-top: 1.2px solid rgb(172, 170, 170) !important;
+    box-shadow: 2px 2px 2px black !important;
 }
 
 /* Orange buttons (operators) */
 .btn-pink {
-    background-color: #a08194;
-    color: #333;
+    /* background-color: #a08194;
+    color: #333; */
+    background-color: rgb(236, 204, 209) !important;
+    color: rgb(49, 49, 46) !important;
+    border-top: 1.2px solid rgb(37, 37, 37) !important;
+    box-shadow: 2px 2px 2px rgb(27, 27, 27) !important;
 }
 
 /* Zero button (special case) */
 .btn-zero {
     grid-column: span 2;
-    border-radius: 50px;
+    border-radius: 50px !important;
     aspect-ratio: 2;
     justify-content: flex-start;
     padding-left: 30px;
